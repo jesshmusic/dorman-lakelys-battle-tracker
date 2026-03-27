@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1] - 2026-03-27
+
+### Other
+- Initial release of Dorman Lakely's Battle Tracker v1.0.0
+
+
 ## [1.0.0] - 2026-03-27
 
 ### Added

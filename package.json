@@ -1,0 +1,20 @@
+{
+  "name": "dorman-lakelys-battle-tracker",
+  "version": "1.0.0",
+  "description": "FoundryVTT module that tracks large-scale battles with dual morale HP pools, ambient combat rolls, and a player-facing HUD",
+  "main": "scripts/battle-tracker.mjs",
+  "scripts": {
+    "release:patch": "node scripts/release.js patch",
+    "release:minor": "node scripts/release.js minor",
+    "release:major": "node scripts/release.js major"
+  },
+  "author": "Jess Music (Dorman Lakely)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jesshmusic/dorman-lakelys-battle-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jesshmusic/dorman-lakelys-battle-tracker/issues"
+  }
+}

@@ -1,0 +1,39 @@
+name: CI Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify module structure
+        run: |
+          for file in module.json scripts/battle-tracker.mjs styles/battle-tracker.css lang/en.json; do
+            if [ ! -f "$file" ]; then
+              echo "::error::Missing required file: $file"
+              exit 1
+            fi
+          done
+          echo "Module structure verified"
+
+      - name: Validate module.json
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('module.json', 'utf8'))"
+          echo "module.json is valid JSON"
+
+      - name: Validate lang/en.json
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('lang/en.json', 'utf8'))"
+          echo "lang/en.json is valid JSON"

@@ -1,0 +1,557 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   Dorman Lakely's Battle Tracker — Styles
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── GM Application ────────────────────────────────────────────────────────── */
+
+.dlbt-container {
+  padding: 8px;
+  font-family: var(--font-primary);
+}
+
+.dlbt-container h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-border-light-1);
+}
+
+.dlbt-container h3 {
+  font-size: 0.9rem;
+  margin: 8px 0 4px 0;
+}
+
+/* ── Setup Screen ──────────────────────────────────────────────────────────── */
+
+.dlbt-setup fieldset {
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin: 8px 0;
+}
+
+.dlbt-setup legend {
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 4px;
+}
+
+.dlbt-field {
+  margin-bottom: 6px;
+}
+
+.dlbt-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: var(--color-text-dark-secondary);
+}
+
+.dlbt-field input[type="text"],
+.dlbt-field input[type="number"] {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: var(--color-bg-option);
+}
+
+.dlbt-field select {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: var(--color-bg-option);
+  color: var(--color-text-light-0, #eee);
+}
+
+.dlbt-field input[type="color"] {
+  width: 40px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dlbt-field-row {
+  display: flex;
+  gap: 8px;
+}
+
+.dlbt-field-row .dlbt-field {
+  flex: 1;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────────────────── */
+
+.dlbt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 4px;
+  background: var(--color-bg-btn);
+  color: var(--color-text-light-0, #eee);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.15s;
+}
+
+.dlbt-btn:hover {
+  background: var(--color-bg-btn-hover);
+}
+
+.dlbt-btn-start {
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  background: #2d6b2d;
+  color: white;
+  border-color: #1f4f1f;
+}
+
+.dlbt-btn-start:hover {
+  background: #3a8a3a;
+}
+
+.dlbt-btn-danger {
+  background: #8b2020;
+  color: white;
+  border-color: #6b1515;
+}
+
+.dlbt-btn-danger:hover {
+  background: #a52a2a;
+}
+
+.dlbt-btn-active {
+  background: #2d6b2d;
+  color: white;
+  border-color: #1f4f1f;
+}
+
+/* ── Active Battle ─────────────────────────────────────────────────────────── */
+
+.dlbt-status-text {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-text-dark-secondary);
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+/* Bar Preview */
+.dlbt-bar-preview {
+  margin: 8px 0 12px 0;
+}
+
+.dlbt-bar-label-left,
+.dlbt-bar-label-right {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-dark-secondary);
+}
+
+.dlbt-bar-label-left {
+  float: left;
+}
+
+.dlbt-bar-label-right {
+  float: right;
+}
+
+.dlbt-bar-track {
+  clear: both;
+  display: flex;
+  height: 18px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #333;
+  border: 1px solid var(--color-border-light-2);
+}
+
+.dlbt-bar-fill-a,
+.dlbt-bar-fill-b {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+/* Faction Columns */
+.dlbt-factions-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.dlbt-faction-col {
+  flex: 1;
+  background: var(--color-bg-option);
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.dlbt-faction-col h3 {
+  margin: 0 0 6px 0;
+  font-size: 0.85rem;
+}
+
+/* Modifiers */
+.dlbt-modifiers {
+  min-height: 24px;
+  margin-bottom: 6px;
+}
+
+.dlbt-mod-tag {
+  display: inline-block;
+  background: var(--color-bg-btn);
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 0.7rem;
+  margin: 2px;
+}
+
+.dlbt-mod-tag a {
+  cursor: pointer;
+  color: #a44;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.dlbt-mod-add {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 6px;
+}
+
+.dlbt-mod-add input[type="text"] {
+  flex: 1;
+  padding: 3px 6px;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 3px;
+}
+
+.dlbt-mod-add input[type="number"] {
+  width: 45px;
+  padding: 3px 4px;
+  font-size: 0.75rem;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 3px;
+}
+
+.dlbt-mod-add button {
+  padding: 3px 6px;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 3px;
+  background: var(--color-bg-btn);
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+/* Shift Morale */
+.dlbt-shift-section {
+  margin-top: 6px;
+}
+
+.dlbt-shift-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-dark-secondary);
+  margin-bottom: 3px;
+}
+
+.dlbt-shift-btns {
+  display: flex;
+  gap: 3px;
+}
+
+.dlbt-shift-btns button {
+  flex: 1;
+  padding: 3px 2px;
+  font-size: 0.7rem;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 3px;
+  background: var(--color-bg-btn);
+  color: var(--color-text-light-0, #eee);
+  cursor: pointer;
+  text-align: center;
+}
+
+.dlbt-shift-btns button:hover {
+  background: var(--color-bg-btn-hover);
+}
+
+/* Controls Row */
+.dlbt-controls {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--color-border-light-2);
+}
+
+.dlbt-btn-fill {
+  flex: 1;
+  justify-content: center;
+}
+
+.dlbt-btn-end {
+  width: 100%;
+  justify-content: center;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+/* Event Log */
+.dlbt-log-section {
+  border-top: 1px solid var(--color-border-light-2);
+  padding-top: 6px;
+}
+
+.dlbt-log {
+  max-height: 180px;
+  overflow-y: auto;
+  font-size: 0.75rem;
+}
+
+.dlbt-log-entry {
+  padding: 2px 0;
+  border-bottom: 1px solid var(--color-border-light-tertiary);
+  color: var(--color-text-dark-secondary);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   Player HUD
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+#dlbt-hud {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 60;
+  width: 500px;
+  max-width: 90vw;
+  pointer-events: auto;
+  background: rgba(15, 15, 20, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  padding: 4px 12px 6px 12px;
+}
+
+.dlbt-hud-drag-handle {
+  text-align: center;
+  cursor: grab;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.7rem;
+  padding: 6px 0;
+  line-height: 1;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.dlbt-hud-drag-handle:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dlbt-hud-dragging {
+  opacity: 0.85;
+  cursor: grabbing !important;
+}
+
+.dlbt-hud-dragging .dlbt-hud-drag-handle {
+  cursor: grabbing;
+}
+
+.dlbt-hud-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dlbt-hud-faction {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 80px;
+}
+
+.dlbt-hud-faction-a {
+  justify-content: flex-start;
+}
+
+.dlbt-hud-faction-b {
+  justify-content: flex-end;
+}
+
+.dlbt-hud-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #eee;
+  white-space: nowrap;
+}
+
+.dlbt-hud-pct {
+  font-size: 0.7rem;
+  color: #aaa;
+  font-family: var(--font-mono);
+}
+
+.dlbt-hud-bar-container {
+  flex: 1;
+  display: flex;
+  height: 14px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #222;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dlbt-hud-bar-a,
+.dlbt-hud-bar-b {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.dlbt-hud-status {
+  text-align: center;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 3px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   Chat Cards
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+.dlbt-chat-card {
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: var(--color-bg-option);
+}
+
+.dlbt-chat-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--color-border-light-2);
+  padding-bottom: 4px;
+}
+
+.dlbt-narrative {
+  font-style: italic;
+  margin: 4px 0;
+}
+
+.dlbt-rolls {
+  font-size: 0.8rem;
+  color: var(--color-text-dark-secondary);
+  margin: 4px 0 0 0;
+}
+
+.dlbt-threshold {
+  border-color: #c9a13c;
+  background: rgba(201, 161, 60, 0.1);
+}
+
+.dlbt-threshold h3 {
+  color: #c9a13c;
+  border-bottom-color: #c9a13c;
+}
+
+/* Victory Card */
+.dlbt-victory {
+  border-color: #d4af37;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+  border-width: 2px;
+}
+
+.dlbt-victory h3 {
+  color: #d4af37;
+  border-bottom-color: #d4af37;
+  font-size: 1.1rem;
+}
+
+.dlbt-victory .dlbt-narrative {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.dlbt-victory-subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-dark-secondary);
+  margin: 4px 0 0 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   Preset UI
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+.dlbt-preset-row {
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-light-2);
+}
+
+.dlbt-preset-row .dlbt-field-row {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.dlbt-preset-select {
+  flex: 1;
+  padding: 4px 6px;
+  border: 1px solid var(--color-border-light-2);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: var(--color-bg-option);
+}
+
+.dlbt-btn-sm {
+  padding: 4px 8px;
+  font-size: 0.75rem;
+}
+
+.dlbt-btn-advance {
+  width: 100%;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  background: #2d5a8b;
+  color: white;
+  border-color: #1f4068;
+}
+
+.dlbt-btn-advance:hover {
+  background: #3a72a8;
+}
+
+.dlbt-btn-help {
+  width: 100%;
+  justify-content: center;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.dlbt-btn-help:hover {
+  opacity: 1;
+}

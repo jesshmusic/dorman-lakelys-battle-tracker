@@ -1,6 +1,6 @@
 {
   "name": "dorman-lakelys-battle-tracker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "FoundryVTT module that tracks large-scale battles with dual morale HP pools, ambient combat rolls, and a player-facing HUD",
   "main": "scripts/battle-tracker.mjs",
   "scripts": {

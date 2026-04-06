@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2026-04-06
+
+### Changed
+- Foundry VTT v14 compatibility verified. Bumped `compatibility.verified` to `14`. **Minimum Foundry version bumped to `14`** — earlier versions of this module remain available for v13 users from the GitHub releases page; this version is v14-only by design. No source changes were required — the existing ApplicationV2, DialogV2, and `getSceneControlButtons` patterns are unchanged in v14.
+
 ## [1.0.1] - 2026-03-27
 
 ### Other

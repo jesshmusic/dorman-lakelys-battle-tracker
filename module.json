@@ -11,7 +11,7 @@
   "bugs": "https://github.com/jesshmusic/dorman-lakelys-battle-tracker/issues",
   "changelog": "CHANGELOG.md",
   "compatibility": {
-    "minimum": "13",
+    "minimum": "14",
     "verified": "14"
   },
   "authors": [

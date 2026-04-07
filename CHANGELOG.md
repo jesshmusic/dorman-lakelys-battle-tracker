@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2026-04-07
+
+### Added
+
+- **`dungeonmaster.guru` link in the "How Does This Work?" help dialog**. A new centered footer below the Player HUD section links to Jess's SRD rules and DM tools site. Inline styles match the existing help dialog aesthetic.
+
 ## [1.0.2] - 2026-04-06
 
 ### Changed

@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Branded `dungeonmaster.guru` cross-promotion card in the "How Does This Work?" help dialog, using the DM Guru logo and brand palette. Styles live in `styles/battle-tracker.css` under the `.dlbt-dmguru-*` class scope.
+- New Settings menu entries for Patreon and Dungeon Master Guru, making both support/resources links directly accessible from the module's configuration menu.
 
 ## [1.0.3] - 2026-04-07
 

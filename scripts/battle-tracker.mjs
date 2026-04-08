@@ -1084,7 +1084,7 @@ class BattleTrackerApp extends foundry.applications.api.ApplicationV2 {
 
           <a href="https://dungeonmaster.guru" target="_blank" rel="noopener noreferrer"
              class="dlbt-dmguru-link" title="SRD rules and DM tools at dungeonmaster.guru">
-            <img src="modules/dorman-lakelys-battle-tracker/icons/dmguru-logo.svg" alt="" class="dlbt-dmguru-logo" />
+            <img src="modules/${MODULE_ID}/icons/dmguru-logo.svg" alt="" class="dlbt-dmguru-logo" />
             <div class="dlbt-dmguru-text">
               <strong>Dungeon Master Guru</strong>
               <span>SRD rules &amp; DM tools</span>
@@ -1126,7 +1126,7 @@ class PatreonLink extends foundry.applications.api.ApplicationV2 {
       ok: {
         label: '<i class="fab fa-patreon"></i> Visit Patreon',
         callback: () =>
-          window.open("https://patreon.com/jesshmusic", "_blank", "noopener,noreferrer"),
+          window.open("https://www.patreon.com/c/DormanLakely", "_blank", "noopener,noreferrer"),
       },
     });
 

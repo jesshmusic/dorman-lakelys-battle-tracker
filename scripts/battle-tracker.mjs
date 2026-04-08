@@ -1082,12 +1082,14 @@ class BattleTrackerApp extends foundry.applications.api.ApplicationV2 {
           <h4><i class="fas fa-eye"></i> Player HUD</h4>
           <p>Players see a draggable tug-of-war bar showing which side is winning. It appears automatically when a battle starts and disappears when it ends. The GM does not see the HUD (the GM app has its own detailed view).</p>
 
-          <hr style="margin:1.2rem 0; border:none; border-top:1px solid rgba(255,255,255,0.15);"/>
-          <p style="text-align:center; font-size:0.85rem; color:#888; margin:0;">
-            More DM tools and SRD rules at
-            <a href="https://dungeonmaster.guru" target="_blank" rel="noopener noreferrer"
-               style="color:#6b9ed2; text-decoration:none;">dungeonmaster.guru</a>
-          </p>
+          <a href="https://dungeonmaster.guru" target="_blank" rel="noopener noreferrer"
+             class="dlbt-dmguru-link" title="SRD rules and DM tools at dungeonmaster.guru">
+            <img src="modules/dorman-lakelys-battle-tracker/icons/dmguru-logo.svg" alt="" class="dlbt-dmguru-logo" />
+            <div class="dlbt-dmguru-text">
+              <strong>Dungeon Master Guru</strong>
+              <span>SRD rules &amp; DM tools</span>
+            </div>
+          </a>
         </div>`,
       ok: { label: "Got It" },
     });

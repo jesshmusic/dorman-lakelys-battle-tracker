@@ -1082,15 +1082,91 @@ class BattleTrackerApp extends foundry.applications.api.ApplicationV2 {
           <h4><i class="fas fa-eye"></i> Player HUD</h4>
           <p>Players see a draggable tug-of-war bar showing which side is winning. It appears automatically when a battle starts and disappears when it ends. The GM does not see the HUD (the GM app has its own detailed view).</p>
 
-          <hr style="margin:1.2rem 0; border:none; border-top:1px solid rgba(255,255,255,0.15);"/>
-          <p style="text-align:center; font-size:0.85rem; color:#888; margin:0;">
-            More DM tools and SRD rules at
-            <a href="https://dungeonmaster.guru" target="_blank" rel="noopener noreferrer"
-               style="color:#6b9ed2; text-decoration:none;">dungeonmaster.guru</a>
-          </p>
+          <a href="https://dungeonmaster.guru" target="_blank" rel="noopener noreferrer"
+             class="dlbt-dmguru-link" title="SRD rules and DM tools at dungeonmaster.guru">
+            <img src="modules/${MODULE_ID}/icons/dmguru-logo.svg" alt="" class="dlbt-dmguru-logo" />
+            <div class="dlbt-dmguru-text">
+              <strong>Dungeon Master Guru</strong>
+              <span>SRD rules &amp; DM tools</span>
+            </div>
+          </a>
         </div>`,
       ok: { label: "Got It" },
     });
+  }
+}
+
+// ── Settings Menu Applications ────────────────────────────────────────────────
+
+class PatreonLink extends foundry.applications.api.ApplicationV2 {
+  static DEFAULT_OPTIONS = {
+    id: "dlbt-patreon-link",
+    tag: "div",
+    window: {
+      title: "Support on Patreon",
+      icon: "fab fa-patreon",
+    },
+    position: { width: 1, height: 1 },
+  };
+
+  async _renderHTML() {
+    return document.createElement("div");
+  }
+
+  _replaceHTML(result, content) {
+    content.replaceChildren(result);
+  }
+
+  async _onFirstRender(_context, _options) {
+    this.element.style.display = "none";
+
+    await foundry.applications.api.DialogV2.prompt({
+      window: { title: "Support on Patreon" },
+      content: "<p>Open the Patreon page in a new tab.</p>",
+      ok: {
+        label: '<i class="fab fa-patreon"></i> Visit Patreon',
+        callback: () =>
+          window.open("https://www.patreon.com/c/DormanLakely", "_blank", "noopener,noreferrer"),
+      },
+    });
+
+    this.close();
+  }
+}
+
+class DmGuruLink extends foundry.applications.api.ApplicationV2 {
+  static DEFAULT_OPTIONS = {
+    id: "dlbt-dmguru-link",
+    tag: "div",
+    window: {
+      title: "Dungeon Master Guru",
+      icon: "fas fa-dragon",
+    },
+    position: { width: 1, height: 1 },
+  };
+
+  async _renderHTML() {
+    return document.createElement("div");
+  }
+
+  _replaceHTML(result, content) {
+    content.replaceChildren(result);
+  }
+
+  async _onFirstRender(_context, _options) {
+    this.element.style.display = "none";
+
+    await foundry.applications.api.DialogV2.prompt({
+      window: { title: "Dungeon Master Guru" },
+      content: "<p>Open the Dungeon Master Guru site in a new tab.</p>",
+      ok: {
+        label: '<i class="fas fa-dragon"></i> Visit Dungeon Master Guru',
+        callback: () =>
+          window.open("https://dungeonmaster.guru", "_blank", "noopener,noreferrer"),
+      },
+    });
+
+    this.close();
   }
 }
 
@@ -1116,6 +1192,24 @@ Hooks.once("init", () => {
     config: false,
     type: Array,
     default: [],
+  });
+
+  game.settings.registerMenu(MODULE_ID, "patreonLink", {
+    name: "Support on Patreon",
+    label: "Visit Patreon",
+    hint: "Support the development of this module on Patreon! Your contributions help fund new features and updates.",
+    icon: "fab fa-patreon",
+    type: PatreonLink,
+    restricted: true,
+  });
+
+  game.settings.registerMenu(MODULE_ID, "dmGuruLink", {
+    name: "Dungeon Master Guru",
+    label: "Visit Dungeon Master Guru",
+    hint: "SRD rules and DM tools. Free resources for Dungeon Masters at dungeonmaster.guru.",
+    icon: "fas fa-dragon",
+    type: DmGuruLink,
+    restricted: true,
   });
 });
 
